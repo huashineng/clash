@@ -1,1 +1,1 @@
-# Clash-LIAN.ini
+OpenClash 配置文件
