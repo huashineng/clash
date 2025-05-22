@@ -3,18 +3,18 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-    - { name: 香港2 三网高级入口 [ISP] x1.2", type: ss, server: main-central.earthsurface.cc, port: 29510, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
-    - { name: 香港5 三网高级入口 [ISP] x1.2", type: ss, server: main-central.earthsurface.cc, port: 28516, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
-    - { name: 香港4 三网高级入口 [ISP] x1.2", type: ss, server: main-central.earthsurface.cc, port: 45299, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
-    - { name: 香港9 三网高级入口 [ISP] x1.2", type: ss, server: main-central.earthsurface.cc, port: 45311, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
-    - { name: 'US-tk', type: socks5, server: 36.156.184.93, port: 12838, username: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true, dialer-proxy: 香港2 三网高级入口 [ISP] x1.2 }
+    - {  name: '香港2 三网高级入口 [ISP] x1.2', type: ss , server: main-central.earthsurface.cc, port: 29510, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
+    - {  name: '香港5 三网高级入口 [ISP] x1.2', type: ss , server: main-central.earthsurface.cc, port: 28516, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
+    - {  name: '香港4 三网高级入口 [ISP] x1.2', type: ss , server: main-central.earthsurface.cc, port: 45299, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
+    - {  name: '香港9 三网高级入口 [ISP] x1.2', type: ss , server: main-central.earthsurface.cc, port: 45311, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
+    - {  name: 'US-tk-1', type: socks5, server: 36.156.184.93, port: 12838, username: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true, dialer-proxy:  '香港2 三网高级入口 [ISP] x1.2' }
 
 proxy-groups:
   - name: "♻ 手动切换"
     type: select
     proxies:
       - DIRECT
-      - U0001F1ED\U0001F1F0香港2 三网高级入口 [ISP] x1.2
+      - 香港2 三网高级入口 [ISP] x1.2
       - DIRECT
       - DIRECT
 
@@ -33,4 +33,4 @@ proxy-groups:
       - 名字2
 
 rules:
-    - 'MATCH,♻ 手动切换'
+    -  'MATCH,♻ 手动切换'
