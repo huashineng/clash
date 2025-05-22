@@ -1,0 +1,28 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+proxies:
+    - { 用来加速的机场节点 }
+    - { name: '名字', type: socks5, server: 住宅ip地址, port: 端口, username: 名称, password: 密码, udp: true, dialer-proxy: 用来加速的机场节点 }
+
+proxy-groups:
+  - name: "♻ 手动切换"
+    type: select
+    proxies:
+      - DIRECT
+  - name: "手机1"
+    type: select
+    proxies:
+      - ♻ 手动切换
+      - DIRECT
+      - 名字1
+  - name: "手机2"
+    type: select
+    proxies:
+      - ♻ 手动切换
+      - DIRECT
+      - 名字2
+
+rules:
+    - 'MATCH,♻ 手动切换'
