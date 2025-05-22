@@ -1,29 +1,29 @@
+yaml 模版
 mixed-port: 7890
 allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-    - { name: "\U0001F1ED\U0001F1F0香港2 三网高级入口 [ISP] x1.2", type: ss, server: main-central.earthsurface.cc, port: 29510, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: True }
-    - { name: 'US-TK', type: socks5, server: 101.36.168.30, port: 12044, username: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true, dialer-proxy: U0001F1F0香港2 三网高级入口 [ISP] x1.2 }
+    - { 用来加速的机场节点 }
+    - { name: '名字', type: socks5, server: 住宅ip地址, port: 端口, username: 名称, password: 密码, udp: true, dialer-proxy: 用来加速的机场节点 }
 
 proxy-groups:
   - name: "♻ 手动切换"
     type: select
     proxies:
       - DIRECT
-      \U0001F1ED\U0001F1F0香港2 三网高级入口 [ISP] x1.2
   - name: "手机1"
     type: select
     proxies:
       - ♻ 手动切换
       - DIRECT
-      - US-TK
+      - 名字1
   - name: "手机2"
     type: select
     proxies:
       - ♻ 手动切换
       - DIRECT
-      - US-bi
+      - 名字2
 
 rules:
     - 'MATCH,♻ 手动切换'
