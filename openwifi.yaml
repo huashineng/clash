@@ -3,8 +3,8 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-    - { name: "香港2 三网高级入口 [ISP] x1.2", server: main-central.earthsurface.cc, port: 29510, type: ss, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true }
-    - { name: "香港5 三网高级入口 [ISP] x1.2", server: main-central.earthsurface.cc, port: 28516, type: ss, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true }
+    - {name: "香港2 三网高级入口 [ISP] x1.2", server: main-central.earthsurface.cc, port: 29510, type: ss, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true}
+    - {name: "香港5 三网高级入口 [ISP] x1.2", server: main-central.earthsurface.cc, port: 28516, type: ss, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true}
     - {name: "美国7(ATT) 三网高级入口 [家宽] x1.2", server: main-central.earthsurface.cc, port: 54234, type: ss, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true}
     - { name: 'US-tk-1', type: socks5, server: 101.36.168.30, port: 12044, username: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true, dialer-proxy:  "香港2 三网高级入口 [ISP] x1.2" }
     - { name: "MY-tk-1", server: main-central.earthsurface.cc, port: 54940, type: ss, cipher: aes-128-gcm, password: d74f254c-72a9-43c8-8374-cc2876e93832, udp: true, dialer-proxy:  "香港5 三网高级入口 [ISP] x1.2"  }
